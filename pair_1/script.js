@@ -22,3 +22,7 @@ console.log(`Product name: ${productName}, Total price without sale: ${fullPrice
 console.log(`Discount amount: ${discountAmount}, Final price: ${totalPrice}`);
 
 alert("Product: " + productName + "\nTotal price to pay is: " + totalPrice);
+
+let isEnough = cash >= totalPrice;
+let message = (isEnough && `Коштів достатньо! Решта: ${cash - totalPrice}`) || `Недостатньо коштів. Бракує: ${totalPrice - cash}`;
+alert(message);
